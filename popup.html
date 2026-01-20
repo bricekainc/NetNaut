@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    :root { --brand: #0102FD; --bg: #fdfdfd; }
+    body { font-family: 'Inter', sans-serif; width: 320px; background: var(--bg); margin: 0; padding: 0; }
+    .header { background: var(--brand); color: white; padding: 15px; font-weight: bold; font-size: 20px; text-align: center; letter-spacing: 1px; }
+    .tabs { display: flex; border-bottom: 1px solid #eee; background: #fff; }
+    .tab { flex: 1; padding: 12px; text-align: center; cursor: pointer; font-size: 13px; font-weight: 600; color: #666; transition: 0.2s; }
+    .tab.active { color: var(--brand); border-bottom: 3px solid var(--brand); }
+    .content { padding: 15px; min-height: 180px; }
+    .feed-card { background: #f0f4ff; border-left: 4px solid var(--brand); padding: 10px; border-radius: 4px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; font-size: 12px; }
+    .setting-item { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; font-size: 14px; color: #444; }
+    button { background: var(--brand); color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-size: 11px; }
+    .hidden { display: none; }
+    input[type="checkbox"] { accent-color: var(--brand); width: 18px; height: 18px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div class="header">NetNaut</div>
+  <div class="tabs">
+    <div class="tab active" id="tabFeeds">RSS FEEDS</div>
+    <div class="tab" id="tabSettings">SETTINGS</div>
+  </div>
+  
+  <div class="content" id="viewFeeds">
+    <div id="feedResults" style="color:#888; text-align:center; margin-top:20px;">Scanning page...</div>
+  </div>
+
+  <div class="content hidden" id="viewSettings">
+    <div class="setting-item">
+      <span>Auto-Resume Downloads</span>
+      <input type="checkbox" id="resumeToggle">
+    </div>
+    <div class="setting-item">
+      <span>Block Ads & Trackers</span>
+      <input type="checkbox" id="adblockToggle">
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
