@@ -1,0 +1,17 @@
+.netnaut-shorten-btn {
+  display: inline-block;
+  margin-left: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  background: #0102FD;
+  color: white;
+  border-radius: 4px;
+  padding: 2px 4px;
+  vertical-align: middle;
+  transition: transform 0.2s;
+  user-select: none;
+}
+
+.netnaut-shorten-btn:hover {
+  transform: scale(1.2);
+}
