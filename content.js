@@ -1,14 +1,17 @@
 let isShortenerEnabled = true;
 
-// Check settings on load
+// Check settings and initialize
 chrome.storage.local.get(['shortenToggle'], (res) => {
   isShortenerEnabled = res.shortenToggle !== false;
-  if (isShortenerEnabled) injectShortenIcons();
+  if (isShortenerEnabled) {
+    injectShortenIcons();
+  }
 });
 
 function injectShortenIcons() {
   const links = document.querySelectorAll('a[href^="http"]');
   links.forEach(link => {
+    // Avoid double-injecting
     if (link.dataset.netnaut) return;
     link.dataset.netnaut = "true";
 
@@ -34,6 +37,8 @@ function injectShortenIcons() {
           navigator.clipboard.writeText(j.data.shorturl);
           btn.innerHTML = "✅";
           setTimeout(() => btn.innerHTML = "✂️", 2000);
+        } else {
+          throw new Error('No URL');
         }
       } catch (err) {
         btn.innerHTML = "❌";
@@ -44,7 +49,7 @@ function injectShortenIcons() {
   });
 }
 
-// Watch for dynamically added links (infinite scroll)
+// Observe page changes for dynamic content (Ajax/Infinite Scroll)
 const observer = new MutationObserver(() => {
   if (isShortenerEnabled) injectShortenIcons();
 });
