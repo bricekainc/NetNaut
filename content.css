@@ -1,17 +1,21 @@
 .netnaut-shorten-btn {
-  display: inline-block;
-  margin-left: 4px;
-  cursor: pointer;
-  font-size: 12px;
-  background: #0102FD;
-  color: white;
-  border-radius: 4px;
-  padding: 2px 4px;
-  vertical-align: middle;
-  transition: transform 0.2s;
-  user-select: none;
+  display: inline-block !important;
+  margin-left: 5px !important;
+  cursor: pointer !important;
+  font-size: 12px !important;
+  background: #0102FD !important;
+  color: white !important;
+  border-radius: 4px !important;
+  padding: 2px 4px !important;
+  vertical-align: middle !important;
+  transition: transform 0.2s !important;
+  user-select: none !important;
+  line-height: 1 !important;
+  border: none !important;
+  z-index: 9999 !important;
 }
 
 .netnaut-shorten-btn:hover {
-  transform: scale(1.2);
+  transform: scale(1.3) !important;
+  filter: brightness(1.2) !important;
 }
