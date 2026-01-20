@@ -1,49 +1,47 @@
-# 🧭 NetNaut
+# 🚀 NetNaut v2.3
+**The Ultimate Web Utility Extension** *Powered by Briceka.com | Sponsored by OnlyCrave.com*
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/version-2.1-0102FD)](https://github.com/bricekainc/NetNaut)
-
-**NetNaut** is a powerful, all-in-one browser utility designed for power users. It combines a smart download manager, an automatic RSS feed detector, and a lightweight ad-blocker into one seamless experience.
+NetNaut is a lightweight, powerful browser extension designed to streamline your web experience. From managing downloads to detecting RSS feeds and shortening links on the fly, NetNaut puts control back in your hands.
 
 ---
 
-## 🚀 Key Features
-
-- **⚡ Auto-Resume Downloads**: Never lose a download again. NetNaut automatically resumes interrupted or paused downloads.
-- **📰 RSS Detector**: Instantly find hidden RSS/Atom feeds on any website you visit.
-- **🛡️ Ad-Blocker**: Built-in rules to block common trackers and intrusive advertisements (Adsterra, Monetag, and more).
-- **⚙️ Custom Settings**: Toggle features on or off based on your preference through a sleek UI.
-
----
-
-## 📥 Installation
-
-Since NetNaut is currently in "Developer Mode," follow these steps to install it in Google Chrome or any Chromium-based browser (Edge, Brave, etc.):
-
-1.  **Download the project** by clicking the button below:
-    [![Download NetNaut](https://img.shields.io/badge/Download-ZIP-0102FD?style=for-the-badge&logo=github)](https://github.com/bricekainc/NetNaut/archive/refs/heads/main.zip)
-2.  **Extract the ZIP** file to a folder on your computer.
-3.  Open Chrome and navigate to `chrome://extensions`.
-4.  Enable **"Developer mode"** (toggle in the top right corner).
-5.  Click **"Load unpacked"** and select the folder where you extracted the files.
-6.  **NetNaut** is now ready! Pin it to your toolbar for easy access.
+## ✨ New in v2.3: Auto Link Shortener
+We've integrated with **Trimd.cc** to bring you seamless link shortening:
+- **Instant Icons:** Small ✂️ icons appear automatically next to any link on any website.
+- **One-Click Copy:** Click the icon to generate a shortened URL and copy it to your clipboard instantly.
+- **Smart Detection:** Uses a dedicated content script to find links even on dynamic, infinite-scroll pages.
+- **Toggle Control:** Don't want the icons? Easily disable them in the extension settings.
 
 ---
 
-## 🛠 Usage
-
-- **Feeds Tab**: When you're on a blog or news site, click the NetNaut icon to see all available RSS feeds. Click "Copy" to grab the URL for your favorite reader.
-- **Settings Tab**: Use the switches to enable or disable the Ad-Blocker or the Auto-Resume feature.
-- **Ad-Blocking**: NetNaut works in the background using High-Performance Declarative Rules to keep your browsing clean.
-
----
-
-## 📄 License
-
-Distributed under the MIT License. See `LICENSE` for more information.
+## 🛠 Features
+* **📡 RSS Feed Detector:** Automatically scans the current page for RSS, Atom, or RDF feeds.
+* **📥 Auto-Resume Downloads:** Never lose progress again. NetNaut automatically resumes interrupted or paused downloads.
+* **🛡️ Ad & Tracker Blocker:** High-performance blocking of invasive ads and trackers using Chrome's native Declarative Net Request API.
+* **🔗 Trimd.cc Integration:** Professional-grade link shortening with a custom, premium interface.
 
 ---
 
-<p align="center">
-  Built with ❤️ for a cleaner web.
-</p>
+## 🚀 Installation
+
+1.  **Download** or clone this repository to your local machine.
+2.  Open your browser and navigate to `chrome://extensions/` (or `edge://extensions/`).
+3.  Enable **Developer Mode** in the top right corner.
+4.  Click **Load unpacked** and select the folder containing the NetNaut files.
+5.  Pin the extension for quick access!
+
+---
+
+## ⚙️ How to Use
+1.  **Shortening Links:** Look for the ✂️ icon next to links on any webpage. Click it to get your shortened URL.
+2.  **Managing Settings:** Open the extension popup, go to the **SETTINGS** tab, and toggle features like Ad-Blocking or the Link Shortener on/off.
+3.  **Finding Feeds:** On pages with RSS feeds, open the **FEEDS** tab to see a list of available URLs you can copy.
+
+---
+
+## 🔒 Privacy & Security
+NetNaut respects your privacy. It does not track your browsing history or store personal data. All link shortening requests are proxied securely via `corsproxy.io` to `trimd.cc`.
+
+---
+
+© 2026 NetNaut. Built with ❤️ for the web.
