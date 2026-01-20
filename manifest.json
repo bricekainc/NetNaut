@@ -1,14 +1,18 @@
 {
   "manifest_version": 3,
   "name": "NetNaut",
-  "version": "2.2",
-  "description": "Auto-resumes downloads, detects RSS feeds, and blocks ads. Powered by Briceka.com.",
+  "version": "2.3",
+  "description": "Auto-resumes downloads, detects RSS feeds, blocks ads, and shortens links. Powered by Briceka.com.",
   "permissions": [
     "downloads",
     "declarativeNetRequest",
     "activeTab",
     "scripting",
     "storage"
+  ],
+  "host_permissions": [
+    "https://trimd.cc/*",
+    "https://corsproxy.io/*"
   ],
   "background": {
     "service_worker": "background.js"
@@ -17,6 +21,13 @@
     "default_popup": "popup.html",
     "default_icon": "icon.png"
   },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ],
   "declarative_net_request": {
     "rule_resources": [{
       "id": "ruleset_1",
