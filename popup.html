@@ -9,10 +9,7 @@
     .tab { flex: 1; padding: 12px; text-align: center; cursor: pointer; font-size: 11px; font-weight: 600; color: #666; transition: 0.2s; }
     .tab.active { color: var(--brand); border-bottom: 3px solid var(--brand); }
     .content { padding: 15px; min-height: 200px; }
-    .feed-card { background: #f0f4ff; border-left: 4px solid var(--brand); padding: 10px; border-radius: 4px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; font-size: 11px; }
     .setting-item { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; font-size: 13px; color: #444; }
-    .help-text { font-size: 12px; color: #555; line-height: 1.5; }
-    button { background: var(--brand); color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-size: 11px; }
     .footer { padding: 12px; font-size: 10px; text-align: center; border-top: 1px solid #eee; color: #888; background: #fff; }
     .footer a { color: var(--brand); text-decoration: none; font-weight: bold; }
     .hidden { display: none; }
@@ -32,24 +29,14 @@
   </div>
 
   <div class="content hidden" id="viewSettings">
-    <div class="setting-item">
-      <span>Auto-Resume Downloads</span>
-      <input type="checkbox" id="resumeToggle">
-    </div>
-    <div class="setting-item">
-      <span>Block Ads & Trackers</span>
-      <input type="checkbox" id="adblockToggle">
-    </div>
+    <div class="setting-item"><span>Auto-Resume Downloads</span><input type="checkbox" id="resumeToggle"></div>
+    <div class="setting-item"><span>Block Ads & Trackers</span><input type="checkbox" id="adblockToggle"></div>
+    <div class="setting-item"><span>Auto Link Shortener</span><input type="checkbox" id="shortenToggle"></div>
   </div>
 
   <div class="content hidden" id="viewHelp">
-    <div class="help-text">
-      <strong>How to use:</strong><br>
-      • Navigate to a site & click <b>Feeds</b> to see RSS links.<br>
-      • Downloads will auto-resume if interrupted.<br>
-      • Ad-blocking is automatic.<br><br>
-      <strong>Ads still showing?</strong><br>
-      Ensure the toggle in Settings is ON and refresh the webpage.
+    <div style="font-size:12px; color:#555;">
+      <strong>Shorten Links:</strong> When enabled, a ✂️ icon appears next to links on websites. Click it to copy a Trimd.cc link instantly.
     </div>
   </div>
 
