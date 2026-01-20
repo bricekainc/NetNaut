@@ -6,17 +6,17 @@
     body { font-family: 'Inter', sans-serif; width: 320px; background: var(--bg); margin: 0; padding: 0; }
     .header { background: var(--brand); color: white; padding: 15px; font-weight: bold; font-size: 20px; text-align: center; letter-spacing: 1px; }
     .tabs { display: flex; border-bottom: 1px solid #eee; background: #fff; }
-    .tab { flex: 1; padding: 12px; text-align: center; cursor: pointer; font-size: 11px; font-weight: 600; color: #666; }
+    .tab { flex: 1; padding: 12px; text-align: center; cursor: pointer; font-size: 11px; font-weight: 600; color: #666; transition: 0.2s; }
     .tab.active { color: var(--brand); border-bottom: 3px solid var(--brand); }
     .content { padding: 15px; min-height: 200px; }
-    .feed-card { background: #f0f4ff; border-left: 4px solid var(--brand); padding: 8px; border-radius: 4px; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center; font-size: 11px; }
-    .setting-item { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-size: 13px; }
-    .help-text { font-size: 12px; color: #555; line-height: 1.4; }
-    button { background: var(--brand); color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; }
-    .footer { padding: 10px; font-size: 10px; text-align: center; border-top: 1px solid #eee; color: #888; }
+    .feed-card { background: #f0f4ff; border-left: 4px solid var(--brand); padding: 10px; border-radius: 4px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; font-size: 11px; }
+    .setting-item { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; font-size: 13px; color: #444; }
+    .help-text { font-size: 12px; color: #555; line-height: 1.5; }
+    button { background: var(--brand); color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-size: 11px; }
+    .footer { padding: 12px; font-size: 10px; text-align: center; border-top: 1px solid #eee; color: #888; background: #fff; }
     .footer a { color: var(--brand); text-decoration: none; font-weight: bold; }
     .hidden { display: none; }
-    input[type="checkbox"] { accent-color: var(--brand); }
+    input[type="checkbox"] { accent-color: var(--brand); width: 16px; height: 16px; }
   </style>
 </head>
 <body>
@@ -28,20 +28,28 @@
   </div>
   
   <div class="content" id="viewFeeds">
-    <div id="feedResults">Scanning page...</div>
+    <div id="feedResults" style="color:#888; text-align:center; margin-top:20px;">Scanning page...</div>
   </div>
 
   <div class="content hidden" id="viewSettings">
-    <div class="setting-item"><span>Auto-Resume Downloads</span><input type="checkbox" id="resumeToggle"></div>
-    <div class="setting-item"><span>Block Ads & Trackers</span><input type="checkbox" id="adblockToggle"></div>
+    <div class="setting-item">
+      <span>Auto-Resume Downloads</span>
+      <input type="checkbox" id="resumeToggle">
+    </div>
+    <div class="setting-item">
+      <span>Block Ads & Trackers</span>
+      <input type="checkbox" id="adblockToggle">
+    </div>
   </div>
 
   <div class="content hidden" id="viewHelp">
     <div class="help-text">
       <strong>How to use:</strong><br>
-      Navigate to any site and click "Feeds" to detect RSS streams. Downloads will auto-resume if they fail. <br><br>
+      • Navigate to a site & click <b>Feeds</b> to see RSS links.<br>
+      • Downloads will auto-resume if interrupted.<br>
+      • Ad-blocking is automatic.<br><br>
       <strong>Ads still showing?</strong><br>
-      Ensure "Block Ads" is ON in settings and refresh the page.
+      Ensure the toggle in Settings is ON and refresh the webpage.
     </div>
   </div>
 
