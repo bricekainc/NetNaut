@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "NetNaut",
-  "version": "2.1",
-  "description": "The ultimate web navigator: Auto-resumes downloads, detects RSS feeds, and blocks ads.",
+  "version": "2.2",
+  "description": "Auto-resumes downloads, detects RSS feeds, and blocks ads. Powered by Briceka.com.",
   "permissions": [
     "downloads",
     "declarativeNetRequest",
