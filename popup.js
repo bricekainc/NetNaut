@@ -1,4 +1,4 @@
-// Tab Switching logic
+// Tab Switching
 const tabs = ['tabFeeds', 'tabSettings', 'tabHelp'];
 const views = ['viewFeeds', 'viewSettings', 'viewHelp'];
 
@@ -50,20 +50,28 @@ chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
     document.querySelectorAll('.copy-btn').forEach(btn => {
       btn.onclick = () => {
         navigator.clipboard.writeText(btn.getAttribute('data-url'));
-        const original = btn.innerText;
+        const originalText = btn.innerText;
         btn.innerText = 'Copied!';
-        setTimeout(() => btn.innerText = original, 1500);
+        setTimeout(() => btn.innerText = originalText, 1500);
       };
     });
   });
 });
 
 // Settings persistence
-const options = ['resumeToggle', 'adblockToggle'];
+const options = ['resumeToggle', 'adblockToggle', 'shortenToggle'];
 options.forEach(id => {
   const el = document.getElementById(id);
   chrome.storage.local.get([id], (res) => { 
     el.checked = res[id] !== false; 
   });
-  el.onchange = () => chrome.storage.local.set({ [id]: el.checked });
+  el.onchange = () => {
+    chrome.storage.local.set({ [id]: el.checked });
+    // Reload active tab to apply/remove shortener icons immediately
+    if (id === 'shortenToggle') {
+      chrome.tabs.query({active: true, currentWindow: true}, (t) => {
+        if (t[0]) chrome.tabs.reload(t[0].id);
+      });
+    }
+  };
 });
