@@ -1,6 +1,10 @@
-// Force enable rules on installation
+// Initialization on install
 chrome.runtime.onInstalled.addListener(() => {
-  chrome.storage.local.set({ resumeToggle: true, adblockToggle: true });
+  chrome.storage.local.set({ 
+    resumeToggle: true, 
+    adblockToggle: true,
+    shortenToggle: true 
+  });
   chrome.declarativeNetRequest.updateEnabledRulesets({
     enableRulesetIds: ["ruleset_1"]
   });
